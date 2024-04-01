@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"rel="stylesheet"/>
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
-</head>
-<body>
-    <div class="menu-icon">
-        <span class="menu-icon__line menu-icon__line-left"></span>
-        <span class="menu-icon__line"></span>
-        <span class="menu-icon__line menu-icon__line-right"></span>
-    </div>
-    
-    <div class="nav">
-        <div class="nav__content">
-            <ul class="nav__list">
-                <li class="nav__list-item">Home</li>
-                <li class="nav__list-item">About</li>
-                <li class="nav__list-item">Projects</li>
-                <li class="nav__list-item">Contact</li>
-            </ul>
+  </head>
+  <body>
+    <nav id="navbar" class="">
+      <div class="nav-wrapper">
+        <div class="logo">
+          <a href="#home"><i class="fa fa-paint-brush"></i> Scott Purdy</a>
         </div>
+
+        <ul id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="menuIcon">
+      <span class="icon icon-bars"></span>
+      <span class="icon icon-bars overlay"></span>
     </div>
-    
-    <div class="site-content">
-        <h1 class="site-content__headline">Scott Purdy Portfolio</h1>
+
+    <div class="overlay-menu">
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>

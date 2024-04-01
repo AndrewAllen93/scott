@@ -1,28 +1,24 @@
-console.clear();
+let menuIcon = document.querySelector('.menuIcon');
+        let nav = document.querySelector('.overlay-menu');
 
-const app = (() => {
-	let body;
-	let menu;
-	let menuItems;
-	
-	const init = () => {
-		body = document.querySelector('body');
-		menu = document.querySelector('.menu-icon');
-		menuItems = document.querySelectorAll('.nav__list-item');
+        menuIcon.addEventListener('click', () => {
+            if (nav.style.transform != 'translateX(0%)') {
+                nav.style.transform = 'translateX(0%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            } else { 
+                nav.style.transform = 'translateX(-100%)';
+                nav.style.transition = 'transform 0.2s ease-out';
+            }
+        });
 
-		applyListeners();
-	}
-	
-	const applyListeners = () => {
-		menu.addEventListener('click', () => toggleClass(body, 'nav-active'));
-	}
-	
-	const toggleClass = (element, stringClass) => {
-		if(element.classList.contains(stringClass))
-			element.classList.remove(stringClass);
-		else
-			element.classList.add(stringClass);
-	}
-	
-	init();
-})();
+
+        // Toggle Menu Icon ========================================
+        let toggleIcon = document.querySelector('.menuIcon');
+
+        toggleIcon.addEventListener('click', () => {
+            if (toggleIcon.className != 'menuIcon toggle') {
+                toggleIcon.className += ' toggle';
+            } else {
+                toggleIcon.className = 'menuIcon';
+            }
+        });
