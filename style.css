@@ -24,9 +24,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background: #21293a;
-  color: #fff;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.5);
+  background-color: white;
+  color: black;
 }
 
 header .logo {
@@ -34,7 +33,7 @@ header .logo {
   font-weight: 700;
   text-decoration: none;
   letter-spacing: 2px;
-  color: #fff;
+  color: black;
 }
 
 header .navbar {
@@ -51,13 +50,12 @@ header .navbar a {
   margin: 0 0.5rem;
   padding: 1rem 1.5rem;
   border-radius: 05px;
-  color: #fff;
+  color: black;
   letter-spacing: 1px;
 }
 
 header .navbar a:hover,
 .active {
-  background: #2c3e50;
   transition: 0.6s;
 }
 
@@ -100,7 +98,7 @@ section h2 {
     flex-direction: column;
     min-width: 300px;
     height: 100vh;
-    background: #2c3e50;
+    background: white;
     top: 0;
     right: -100%;
     transition: all 0.9s;
