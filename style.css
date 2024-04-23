@@ -50,7 +50,7 @@
       transition: all 0.3s ease-out;
       font-family: "Poppins";
       font-weight: 300;
-      margin-right: 150px; /* Adjust margin-right for positioning */
+      margin-right: 5%; /* Adjust margin-right for positioning */
   }
   
   nav #menu {
@@ -152,6 +152,18 @@
   }
   
   /* Media queries for responsiveness */
+  @media(max-width: 1200px) {
+      nav #brand a {
+          margin-right: 10%; /* Adjust margin-right for positioning */
+      }
+  }
+  
+  @media(max-width: 992px) {
+      nav #brand a {
+          margin-right: 7%; /* Adjust margin-right for positioning */
+      }
+  }
+  
   @media(max-width: 768px) {
       #toggle {
           visibility: visible;
