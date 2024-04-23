@@ -1,158 +1,180 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-}
-
-html {
-  font-size: 62.5%;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      list-style: none;
 }
 
 body {
-  background: url("img.jpg") no-repeat center center/cover;
-  height: 100vh;
-  overflow: hidden;
+      width: 100%;
+      height: 100vh;
+      background: url(Hero.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      display: table;
 }
 
-header {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  color: black;
+.content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 }
 
-header .logo {
-  font-size: 30px;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 2px;
-  color: black;
+.content h1 {
+      color: #fff;
+      font-family: "Poppins";
+      font-weight: 200;
+      font-size: 40px;
 }
 
-header .navbar {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header .navbar a {
-    position: relative; /* Ensure relative positioning for pseudo-element */
-    font-size: 1.7rem;
-    font-weight: 500;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    padding: 1rem 1.5rem;
-    color: black;
-    letter-spacing: 1px;
-  }
-  
-  header .navbar a:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Adjust this value to lower or raise the underline */
-    width: 0;
-    height: 2px; /* Adjust this value for the thickness of the underline */
-    background-color: red;
-    transition: width 0.6s ease-in-out; /* Smooth transition */
-  }
-  
-  header .navbar a:hover:after,
-  .active:after {
-    width: 80%;
-  }
-  
-
-header .btn {
-  font-size: 25px;
-  cursor: pointer;
-  display: none;
+nav {
+      width: 100%;
+      /* background: #000; */
+      height: 70px;
+      position: static;
+      z-index: 1;
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+nav #brand {
+      float: left;
+      display: block;
+      margin-left: 84px;
+      font-size: 30px;
+      line-height: 70px;
+      font-weight: bold;
 }
 
-section h2 {
-  color: #fff;
-  font-size: 10rem;
-  letter-spacing: 0.9rem;
-  text-align: center;
+nav #brand a {
+      color: #fff;
+      transition: all 0.3s ease-out;
+      font-family: "Poppins";
+      font-weight: 300;
+      margin-right: 85px;
 }
 
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-  header {
-    padding: 1rem 2rem;
-  }
+nav #menu {
+      float: left;
+      left: 50%;
+      position: relative;
 }
 
-@media (max-width: 768px) {
-  header .btn {
-    display: block;
-  }
+nav #menu li {
+      display: inline-block;
+      padding: 0px 30px;
+      cursor: pointer;
+      line-height: 70px;
+      position: relative;
+      transition: all 0.3s ease-out;
+}
 
-  header .navbar {
-    position: fixed;
-    flex-direction: column;
-    min-width: 300px;
-    height: 100vh;
-    background: white;
-    top: 0;
-    right: -100%;
-    transition: all 0.9s;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-top: 10rem;
-  }
+nav #menu li a {
+      color: #fff;
+      font-family: "Poppins";
+      font-weight: 200;
+}
 
-  header .navbar.active2 {
-    right: 0;
-    transition: 0.9s;
-  }
+#toggle {
+      position: absolute;
+      right: 20px;
+      top: 14px;
+      z-index: 999;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+}
 
-  header .navbar .close-btn {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 25px;
-  }
+#toggle .span {
+      height: 3px;
+      background: #fff;
+      transition: all 0.3s ease-out;
+      backface-visibility: hidden;
+      margin: 5px auto;
+}
 
-  header .navbar a {
-    display: block;
-    font-size: 1.9rem;
-    margin: 15px;
-    padding: 0.5rem 15px;
-  }
+#toggle.on #one {
+      transform: rotate(45deg) translateX(2px) translateY(4px);
+}
 
-  header .navbar a:hover {
-    background: #21293a;
-    color: #fff;
-  }
+#toggle.on #two {
+      opacity: 0;
+}
 
-  header .logo {
-    font-size: 25px;
-    font-weight: 500;
-  }
+#toggle.on #three {
+      transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
 
-  section h2 {
-    color: #fff;
-    font-size: 5rem;
-    padding: 2rem;
-    letter-spacing: 0.9rem;
-    text-align: center;
-  }
+#resize {
+      z-index: 1;
+      top: 0px;
+      position: absolute;
+      background: #000;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+      display: table;
+}
+
+#resize #menu {
+      height: 90px;
+      display: table-cell;
+      vertical-align: center;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 50px;
+      min-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top:140px;
+}
+
+#resize #menu li a {
+      color: #fff;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 0.99;
+}
+
+
+@media(max-width: 768px) {
+      #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+      }
+
+      nav #brand {
+            margin-left: 18px;
+      }
+
+      #menu a {
+            font-family: "Poppins";
+            font-weight: 200;
+            font-size: 20px;
+      }
+
+      nav #menu {
+            display: none;
+      }
+}
+
+@media(min-width: 768px) {
+      #resize {
+            visibility: hidden !important;
+      }
 }
