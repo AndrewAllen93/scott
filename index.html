@@ -1,47 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Smooth Fade-Up Responsive Navigation</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900" rel="stylesheet">
-</head>
-<body>
-    <nav>
-        <span id="brand">
-            <a href="index.html">Brand</a>
-        </span>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <title>Responsive navbar - Bedimcode</title>
+   </head>
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">Scott Purdy</a>
 
-        <ul id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Home</span>
+                     </a>
+                  </li>
 
-        <div id="toggle">
-            <div class="span" id="one"></div>
-            <div class="span" id="two"></div>
-            <div class="span" id="three"></div>
-        </div>
-    </nav>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>About Us</span>
+                     </a>
+                  </li>
 
-    <div id="resize">
-        <ul id="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
-    </div>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Projects</span>
+                     </a>
+                  </li>
 
-    <div class="content">
-        <h1>Smooth Fade-Up Navigation</h1>
-    </div>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Studio</span>
+                     </a>
+                  </li>
 
-    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="./main.js"></script>
-</body>
+                  <li class="nav__item">
+                     <a href="#" class="nav__link">
+                        <i class="ri-arrow-right-up-line"></i>
+                        <span>Contact</span>
+                     </a>
+                  </li>
+               </ul>
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-large-line"></i>
+               </div>
+            </div>
+
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-line"></i>
+            </div>
+         </nav>
+      </header>
+
+      <!--==================== MAIN ====================-->
+      <main>
+         <!-- Insert page sections -->
+      </main>
+      
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
