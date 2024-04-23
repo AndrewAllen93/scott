@@ -81,8 +81,13 @@ a {
 }
 
 .nav__logo {
-  color: black;
-  font-weight: var(--font-medium);
+  display: inline-block;
+}
+
+.nav__logo img {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  vertical-align: middle; /* Align the image vertically */
 }
 
 .nav__close, 
@@ -95,6 +100,10 @@ a {
 
 /* Navigation for mobile devices */
 @media screen and (max-width: 1150px) {
+  .nav__logo img {
+    margin-top: 10px;
+  }
+  
   .nav__menu {
     position: fixed;
     left: -100%;
