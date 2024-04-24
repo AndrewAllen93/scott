@@ -1,90 +1,149 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
-      <link rel="stylesheet" href="assets/css/styles.css">
-      <title>James Scott Purdy</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <nav class="nav container">
-            <a href="#" class="nav__logo">
-               <img src="./scott-logo.png" alt="Scott Purdy Logo">
-           </a>
-           
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>James Scott Purdy</title>
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <img src="./scott-logo.png" alt="Scott Purdy Logo" />
+        </a>
 
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Home</span>
-                     </a>
-                  </li>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="ri-arrow-right-up-line"></i>
+                <span>Home</span>
+              </a>
+            </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>About Us</span>
-                     </a>
-                  </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="ri-arrow-right-up-line"></i>
+                <span>About Us</span>
+              </a>
+            </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Projects</span>
-                     </a>
-                  </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="ri-arrow-right-up-line"></i>
+                <span>Projects</span>
+              </a>
+            </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Studio</span>
-                     </a>
-                  </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="ri-arrow-right-up-line"></i>
+                <span>Studio</span>
+              </a>
+            </li>
 
-                  <li class="nav__item">
-                     <a href="#" class="nav__link">
-                        <i class="ri-arrow-right-up-line"></i>
-                        <span>Contact</span>
-                     </a>
-                  </li>
-               </ul>
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="ri-arrow-right-up-line"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
 
-               <!-- Close button -->
-               <div class="nav__close" id="nav-close">
-                  <i class="ri-close-large-line"></i>
-               </div>
-            </div>
+          <!-- Close button -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-large-line"></i>
+          </div>
+        </div>
 
-            <!-- Toggle button -->
-            <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line"></i>
-            </div>
-         </nav>
-      </header>
+        <!-- Toggle button -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+    </header>
 
-      <!--==================== MAIN ====================-->
-      <main class="carousel-container">
-         <div class="carousel">
-           <div class="item active">
-             <img src="https://bit.ly/34xczKy" alt="Image 1" />
-           </div>
-           <div class="item">
-             <img src="https://bit.ly/3lkp5DW" alt="Image 2" />
-           </div>
-           <div class="item">
-             <img src="https://bit.ly/3iMHuI1" alt="Image 3" />
-           </div>
-         </div>
-         <button class="btn prev">Prev</button>
-         <button class="btn next">Next</button>
-       </main>
-      
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+    <!--==================== MAIN ====================-->
+    <main>
+      <input type="radio" id="s-1" name="slider-control" checked="checked" />
+      <input type="radio" id="s-2" name="slider-control" />
+      <input type="radio" id="s-3" name="slider-control" />
+      <div class="js-slider">
+        <figure class="js-slider_item img-1">
+          <div class="js-slider_img">
+            <img
+              class="c-img-w-full"
+              src="./assets/images/scott1.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="wo-caption">
+            <h3 class="wo-h3">
+              <div class="c-label">All points first released</div>
+              <br class="view-sm mb-s" />Tsuwano domain denizen came to fold things
+            </h3>
+            <ul class="wo-credit">
+              <li>118 pieces of folded objects, 12th year of Huozheng Yuan Dynasty (1789-1800)</li>
+              <li>Shimane Prefectural Museum of Art (Nagata Gallery)</li>
+              <li>
+               Regular display <span class="c-txt-s">All points of the 4th issue are displayed</span>
+              </li>
+            </ul>
+          </figcaption>
+        </figure>
+        <figure class="js-slider_item img-2">
+          <div class="js-slider_img">
+            <img
+              class="c-img-h-full"
+              src="./assets/images/scott2.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="wo-caption">
+            <h3 class="wo-h3">"Elegant without a habit" Telescope</h3>
+            <ul class="wo-credit">
+              <li>Oban size, Kyowa era (1801-04)</li>
+              <li>Lee Darks Collection</li>
+              <li>Exhibition period: January 30 (Wed) - February 18 (Mon)</li>
+            </ul>
+          </figcaption>
+        </figure>
+        <figure class="js-slider_item img-3">
+          <div class="js-slider_img">
+            <img
+              class="c-img-h-full"
+              src="./assets/images/scott3.jpg"
+              alt=""
+            />
+          </div>
+          <figcaption class="wo-caption">
+            <h3 class="wo-h3">"Elegant without a habit" Lantern plant</h3>
+            <ul class="wo-credit">
+              <li>Oban size, Kyowa era (1801-04)</li>
+              <li>US, Private collection</li>
+              <li>Exhibition period: January 30 (Wed) - February 18 (Mon)</li>
+            </ul>
+          </figcaption>
+        </figure>
+        <div class="js-slider_nav">
+          <label class="js-slider_nav_item s-nav-1 prev" for="s-3"></label>
+          <label class="js-slider_nav_item s-nav-1 next" for="s-2"></label>
+          <label class="js-slider_nav_item s-nav-2 prev" for="s-1"></label>
+          <label class="js-slider_nav_item s-nav-2 next" for="s-3"></label>
+          <label class="js-slider_nav_item s-nav-3 prev" for="s-2"></label>
+          <label class="js-slider_nav_item s-nav-3 next" for="s-1"></label>
+        </div>
+      </div>
+    </main>
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
