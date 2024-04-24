@@ -71,45 +71,62 @@
 <img src="" alt="">
     <!--==================== MAIN ====================-->
     <main>
-      <div class="slider-ctr">
-         <figure class="slide">
-           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/111167/img5.jpeg" alt="Sky">
-           <figcaption>
-             <div class="title">Sky</div>
-             <div class="author">Aleksandra</div>
-           </figcaption>
-         </figure>
-         <figure class="slide">
-           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/111167/img1.jpeg" alt="River">
-           <figcaption>
-             <div class="title">River</div>
-             <div class="author">Ales Krivec</div>
-           </figcaption>
-         </figure>
-         <figure class="slide">
-           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/111167/img4.jpeg" alt="Rain">
-           <figcaption>
-             <div class="title">Rain</div>
-             <div class="author">Wilson Lau</div>
-           </figcaption>
-         </figure>
-         <figure class="slide text-on">
-           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/111167/img2.jpeg" alt="Ocean">
-           <figcaption>
-             <div class="title">Ocean</div>
-             <div class="author">Rosan Harmens</div>
-           </figcaption>
-         </figure>
-         <div class="slider-control">
-           <div class="control prev disabled">
-             <div class="icon ion-chevron-left"></div>
-           </div>
-           <div class="control next">
-             <div class="icon ion-chevron-right"></div>
-           </div>
-         </div>
-       </div>
-       
+      <input type="radio" id="s-1" name="slider-control" checked="checked">
+<input type="radio" id="s-2" name="slider-control">
+<input type="radio" id="s-3" name="slider-control">
+<div class="js-slider">
+  <figure class="js-slider_item img-1">
+    <div class="js-slider_img">
+      <img class="c-img-w-full" src="./assets/images/scott1.jpg" alt="">
+    </div>
+    <figcaption class="wo-caption">
+      <h3 class="wo-h3">
+        <div class="c-label">Fully Public Debut</div>
+        <br class="view-sm mb-s">Tsuwano Domain Transferred Prints</h3>
+      <ul class="wo-credit">
+        <li>118 Prints, Kansei 1-12 (1789-1800)</li>
+        <li>Shimane Prefectural Museum (Nagata Collection)</li>
+        <li>Permanent Exhibition
+          <span class="c-txt-s">※Displayed in four parts throughout the year</span></li>
+      </ul>
+    </figcaption>
+  </figure>
+  <figure class="js-slider_item img-2">
+    <div class="js-slider_img">
+      <img class="c-img-h-full" src="./assets/images/scott2.jpg" alt=""></div>
+    <figcaption class="wo-caption">
+      <h3 class="wo-h3">Telescope "Without Elegance, No Love"</h3>
+      <ul class="wo-credit">
+        <li>Ōban, Kyōwa Period (1801-04)</li>
+        <li>Lee Darks Collection</li>
+        <li>Exhibition Period: January 30th (Wed) to February 18th (Mon)</li></ul>
+    </figcaption>
+  </figure>
+  <figure class="js-slider_item img-3">
+    <div class="js-slider_img">
+      <img class="c-img-h-full" src="./assets/images/scott3.jpg" alt=""></div>
+    <figcaption class="wo-caption">
+      <h3 class="wo-h3">Physalis "Without Elegance, No Love"</h3>
+      <ul class="wo-credit">
+        <li>Ōban, Kyōwa Period (1801-04)</li>
+        <li>U.S.A., Private Collection</li>
+        <li>Exhibition Period: January 30th (Wed) to February 18th (Mon)</li></ul>
+    </figcaption>
+  </figure>
+  <div class="js-slider_nav">
+    <label class="js-slider_nav_item s-nav-1 prev" for="s-3"></label>
+    <label class="js-slider_nav_item s-nav-1 next" for="s-2"></label>
+    <label class="js-slider_nav_item s-nav-2 prev" for="s-1"></label>
+    <label class="js-slider_nav_item s-nav-2 next" for="s-3"></label>
+    <label class="js-slider_nav_item s-nav-3 prev" for="s-2"></label>
+    <label class="js-slider_nav_item s-nav-3 next" for="s-1"></label>
+  </div>
+  <!-- <div class="js-slider_indicator">
+    <div class="js-slider-indi indi-1"></div>
+    <div class="js-slider-indi indi-2"></div>
+    <div class="js-slider-indi indi-3"></div>
+  </div> -->
+</div>
        
     </main>
 
