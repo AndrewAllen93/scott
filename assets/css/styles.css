@@ -271,6 +271,95 @@ a {
   }
 }
 
+/* Fonts */
+/* Header Font */
+.font-header {
+  font-family: Montserrat, helvetica;
+}
+
+/* Nav Font */
+.font-nav {
+  font-family: "Space Mono", monospace;
+}
+
+/* Colors */
+/* Dark Color */
+.color-dark {
+  color: #111;
+}
+
+/* Border Color */
+.color-border {
+  border-color: #ccc;
+}
+
+/* Transparent Background Color */
+.color-trans-bg {
+  background-color: #ededed;
+}
+
+/* Easings */
+/* Easing Function */
+.ease-cb {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Easing Function 2 */
+.ease-cb-2 {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Easing Function 3 */
+.ease-cb-3 {
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Easing Function 4 */
+.ease-cb-4 {
+  transition-timing-function: cubic-bezier(0.99, 1, 0.92, 1);
+}
+
+/* Padding */
+/* Padding Value */
+.pad {
+  padding: 3em;
+}
+
+/* Media Queries */
+/* Medium Media Query */
+@media (min-width: 54em) {
+  /* Your medium MQ styles here */
+}
+
+/* Large Media Query */
+@media (min-width: 65em) {
+  /* Your large MQ styles here */
+}
+
+/* Extra Large Media Query */
+@media (min-width: 91em) {
+  /* Your extra large MQ styles here */
+}
+
+/* Mixin */
+/* Transition Delay on nth-childs */
+/* @param: $delay_items: number of nth-of-type items to create */
+/* @param: $delay_time: transition-dealy value */
+@function nth-trans-delay($delay_items, $delay_time) {
+  $css: ();
+  @for $i from 1 through $delay_items {
+    $css: append($css, "&:nth-child(#{$i}) { transition-delay: #{($delay_time * $i)}; }", comma);
+  }
+  @return $css;
+}
+
+/* Body, prevent scrolling */
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+/* Slides Nav */
 .slides-nav {
   z-index: 99;
   position: fixed;
@@ -335,6 +424,11 @@ a {
   outline: 0;
 }
 
+.is-sliding .slides-nav button {
+  pointer-events: none;
+}
+
+/* Slides */
 .slides {
   position: relative;
   display: block;
@@ -344,11 +438,12 @@ a {
   transition: background 1s cubic-bezier(0.99, 1, 0.92, 1);
 }
 
-.slides.is-sliding {
+.slides .is-sliding {
   background: #ededed;
   transition: background 0.3s cubic-bezier(0.99, 1, 0.92, 1);
 }
 
+/* Single Slide */
 .slide {
   z-index: -1;
   padding: 0;
@@ -409,28 +504,8 @@ a {
   }
 }
 
-.title-line {
-  display: block;
-  overflow-y: hidden;
-}
 
-.title-line span {
-  display: inline-block;
-  transform: translate3d(0, 140%, 0);
-  opacity: 0;
-  transition: transform 0.4s ease, opacity 0.8s ease;
-}
-
-.title-line.is-active span {
-  transform: translate3d(0, 0%, 0);
-  opacity: 1;
-  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.1s ease;
-}
-
-.title-line.is-active:nth-of-type(2n) span {
-  transition-delay: 0.2s;
-}
-
+/* Image wrapper */
 .slide__figure {
   z-index: 7;
   position: absolute;
@@ -450,7 +525,8 @@ a {
 .slide__img {
   position: relative;
   display: block;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50%;
   -webkit-backface-visibility: hidden;
@@ -469,5 +545,3 @@ a {
 .slide.is-sliding .slide__img {
   filter: grayscale(100%);
 }
-
-
