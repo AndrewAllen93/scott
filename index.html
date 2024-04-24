@@ -68,79 +68,67 @@
         </div>
       </nav>
     </header>
-
+<img src="" alt="">
     <!--==================== MAIN ====================-->
     <main>
-      <input type="radio" id="s-1" name="slider-control" checked="checked" />
-      <input type="radio" id="s-2" name="slider-control" />
-      <input type="radio" id="s-3" name="slider-control" />
-      <div class="js-slider">
-        <figure class="js-slider_item img-1">
-          <div class="js-slider_img">
-            <img
-              class="c-img-w-full"
-              src="./assets/images/scott1.jpg"
-              alt=""
-            />
+      <section class="slides"> 
+        
+        <section class="slides-nav">
+          <nav class="slides-nav__nav">
+            <button class="slides-nav__prev js-prev">Prev</button>
+            <button class="slides-nav__next js-next">Next</button>
+          </nav>
+        </section>
+      
+        <section class="slide is-active">
+          <div class="slide__content">
+            <figure class="slide__figure"><div class="slide__img" style="background-image: url(./assets/images/scott1.jpg)"></div></figure>
+            <header class="slide__header">
+              <h2 class="slide__title">
+                <span class="title-line"><span>Click, Key</span></span>
+                <span class="title-line"><span>Or Scroll Fool</span></span>
+              </h2>
+            </header>
           </div>
-          <figcaption class="wo-caption">
-            <h3 class="wo-h3">
-              <div class="c-label">All points first released</div>
-              <br class="view-sm mb-s" />Tsuwano domain denizen came to fold things
-            </h3>
-            <ul class="wo-credit">
-              <li>118 pieces of folded objects, 12th year of Huozheng Yuan Dynasty (1789-1800)</li>
-              <li>Shimane Prefectural Museum of Art (Nagata Gallery)</li>
-              <li>
-               Regular display <span class="c-txt-s">All points of the 4th issue are displayed</span>
-              </li>
-            </ul>
-          </figcaption>
-        </figure>
-        <figure class="js-slider_item img-2">
-          <div class="js-slider_img">
-            <img
-              class="c-img-h-full"
-              src="./assets/images/scott2.jpg"
-              alt=""
-            />
+        </section>
+      
+        <section class="slide">
+          <div class="slide__content">
+            <figure class="slide__figure"><div class="slide__img" style="background-image: url(./assets/images/scott2.jpg)"></div></figure>
+            <header class="slide__header">
+              <h2 class="slide__title">
+                <span class="title-line"><span>Slide Two</span></span>
+                <span class="title-line"><span>Dood Mood</span></span>
+              </h2>
+            </header>
           </div>
-          <figcaption class="wo-caption">
-            <h3 class="wo-h3">"Elegant without a habit" Telescope</h3>
-            <ul class="wo-credit">
-              <li>Oban size, Kyowa era (1801-04)</li>
-              <li>Lee Darks Collection</li>
-              <li>Exhibition period: January 30 (Wed) - February 18 (Mon)</li>
-            </ul>
-          </figcaption>
-        </figure>
-        <figure class="js-slider_item img-3">
-          <div class="js-slider_img">
-            <img
-              class="c-img-h-full"
-              src="./assets/images/scott3.jpg"
-              alt=""
-            />
+        </section>
+      
+        <section class="slide">
+          <div class="slide__content">
+            <figure class="slide__figure"><div class="slide__img" style="background-image: url(./assets/images/scott3.jpg)"></div></figure>
+            <header class="slide__header">
+              <h2 class="slide__title">
+                <span class="title-line"><span>This Right</span></span>
+                <span class="title-line"><span>Here Makes Three</span></span>
+              </h2>
+            </header>
           </div>
-          <figcaption class="wo-caption">
-            <h3 class="wo-h3">"Elegant without a habit" Lantern plant</h3>
-            <ul class="wo-credit">
-              <li>Oban size, Kyowa era (1801-04)</li>
-              <li>US, Private collection</li>
-              <li>Exhibition period: January 30 (Wed) - February 18 (Mon)</li>
-            </ul>
-          </figcaption>
-        </figure>
-        <div class="js-slider_nav">
-          <label class="js-slider_nav_item s-nav-1 prev" for="s-3"></label>
-          <label class="js-slider_nav_item s-nav-1 next" for="s-2"></label>
-          <label class="js-slider_nav_item s-nav-2 prev" for="s-1"></label>
-          <label class="js-slider_nav_item s-nav-2 next" for="s-3"></label>
-          <label class="js-slider_nav_item s-nav-3 prev" for="s-2"></label>
-          <label class="js-slider_nav_item s-nav-3 next" for="s-1"></label>
-        </div>
-      </div>
-    </main>
+        </section>
+      
+        <section class="slide">
+          <div class="slide__content">
+            <figure class="slide__figure"><div class="slide__img" style="background-image: url(./assets/images/scott4.jpg)"></div></figure>
+            <header class="slide__header">
+              <h2 class="slide__title">
+                <span class="title-line"><span>How Now</span></span>
+                <span class="title-line"><span>Part Four More</span></span>
+              </h2>
+            </header>
+          </div>
+        </section>
+      </section>
+      </main>
 
 
     <!--=============== MAIN JS ===============-->
