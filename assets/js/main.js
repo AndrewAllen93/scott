@@ -1,130 +1,88 @@
 /*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu');
-const navToggle = document.getElementById('nav-toggle');
-const navClose = document.getElementById('nav-close');
+const navMenu = document.getElementById('nav-menu'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
 
 /* Menu show */
-if (navToggle) {
-   navToggle.addEventListener('click', () => {
-      navMenu.classList.add('show-menu');
-   });
+if(navToggle){
+   navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu')
+   })
 }
 
 /* Menu hidden */
-if (navClose) {
-   navClose.addEventListener('click', () => {
-      navMenu.classList.remove('show-menu');
-   });
+if(navClose){
+   navClose.addEventListener('click', () =>{
+      navMenu.classList.remove('show-menu')
+   })
 }
 
-/* Slice Slider */
-var SliceSlider = {
-  settings: {
-    delta: 0,
-    currentSlideIndex: 0,
-    scrollThreshold: 40,
-    slides: document.querySelectorAll('.slide'),
-    numSlides: document.querySelectorAll('.slide').length,
-    navPrev: document.querySelectorAll('.js-prev'),
-    navNext: document.querySelectorAll('.js-next'),
-  },
+// buttons
+var sliderControl = document.querySelector(".slider-control");
+
+// slides informations
+var slides = document.querySelectorAll(".slide"),
+    slidesLength = slides.length;
+
+// slides array
+var slidesArr = [].slice.call(slides);
+
+// reverse array sorting
+slidesArr = slidesArr.reverse();
+
+// slide current
+var slideCurrent = 0;
+
+sliderControl.addEventListener("click", function(e){
+  target = e.target;
   
-  init: function() {
-    this.bindEvents();
-  },
+  // get next button
+  if(target.classList.contains("next")){
+
+    next = e.target,
+    prev = next.previousElementSibling,
+    nextSlide = slidesArr[slideCurrent + 1],
+    slide = slidesArr[slideCurrent];
+    
+    slide.classList.add("slide-on");
+    slide.classList.remove("text-on");
+    nextSlide.classList.add("text-on");
+    
+    slideCurrent += 1;
+    
+    if(slideCurrent > 0) {
+      prev.classList.remove("disabled");
+    }
+    
+    if(slideCurrent === slidesLength - 1){
+      next.classList.add("disabled");
+    }
+  }
   
-  bindEvents: function(){
-    var self = this;
-    // Scrollwheel & trackpad
-    this.settings.slides.forEach(function(slide) {
-      slide.addEventListener('wheel', function(e) {
-        self.handleScroll(e);
-      });
-    });
-    // On click prev
-    this.settings.navPrev.forEach(function(nav) {
-      nav.addEventListener('click', function() {
-        self.prevSlide();
-      });
-    });
-    // On click next
-    this.settings.navNext.forEach(function(nav) {
-      nav.addEventListener('click', function() {
-        self.nextSlide();
-      });
-    });
-    // On Arrow keys
-    document.addEventListener('keyup', function(e) {
-      // Left or back arrows
-      if ((e.which === 37) ||  (e.which === 38)){
-        self.prevSlide();
-      }
-      // Down or right
-      if ((e.which === 39) ||  (e.which === 40)) {
-        self.nextSlide();
-      }
-    });
-  },
-  
-  handleScroll: function(e){
-    var self = SliceSlider;
-    // Scrolling up
-    if (e.deltaY < 0) { 
-      self.settings.delta--;
-      if ( Math.abs(self.settings.delta) >= self.settings.scrollThreshold) {
-        self.prevSlide();
-      }
+  // get prev button
+  if(target.classList.contains("prev")){
+    
+    slideCurrent -= 1;
+    
+    prev = e.target,
+    next = prev.nextElementSibling,
+    prevSlide = slidesArr[slideCurrent + 1],
+    slide = slidesArr[slideCurrent];
+    
+    prevSlide.classList.remove("text-on");
+    slide.classList.remove("slide-on");
+    slide.classList.add("text-on");
+    
+    if(slideCurrent === slidesLength - 2){
+      next.classList.remove("disabled");
     }
-    // Scrolling Down
-    else {
-      self.settings.delta++;
-      if (self.settings.delta >= self.settings.scrollThreshold) {
-        self.nextSlide();
-      }
-    }
-    // Prevent page from scrolling
-    e.preventDefault();
-  },
 
-  showSlide: function(){ 
-    var self = this;
-    // Reset
-    this.settings.delta = 0;
-    // Bail if we're already sliding
-    if (document.body.classList.contains('is-sliding')){
-      return;
+    if(slideCurrent === 0){
+      prev.classList.add("disabled");
     }
-    // Loop through our slides
-    this.settings.slides.forEach(function(slide, i) {
-      // Toggle the is-active class to show slide
-      slide.classList.toggle('is-active', (i === self.settings.currentSlideIndex)); 
-      slide.classList.toggle('is-prev', (i === self.settings.currentSlideIndex - 1)); 
-      slide.classList.toggle('is-next', (i === self.settings.currentSlideIndex + 1)); 
-      // Add and remove is-sliding class
-      document.body.classList.add('is-sliding');
-      setTimeout(function(){
-        document.body.classList.remove('is-sliding');
-      }, 1000);
-    });
-  },
+    
+  }
 
-  prevSlide: function(){
-    // If on first slide, loop to last
-    if (this.settings.currentSlideIndex <= 0) {
-      this.settings.currentSlideIndex = this.settings.numSlides;
-    }
-    this.settings.currentSlideIndex--;
-    this.showSlide();
-  },
+});
 
-  nextSlide: function(){
-    this.settings.currentSlideIndex++;
-    // If on last slide, loop to first
-    if (this.settings.currentSlideIndex >= this.settings.numSlides) { 
-      this.settings.currentSlideIndex = 0;
-    }
-    this.showSlide();
-  },
-};
-
-SliceSlider.init();
+balapaCop("Image Slider", "#999");
