@@ -466,6 +466,35 @@ a {
 
 }
 
+@media screen and (max-width: 915px) and (orientation: landscape) {
+  .slider-ctr {
+    height: 80vh; /* Adjust height as needed */
+  }
+  .slide figcaption {
+    /* Adjust positioning for landscape orientation */
+  }
+  /* Adjust other styles as needed */
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .slider-ctr {
+    height: 60vh; /* Adjust height as needed */
+  }
+  .slide figcaption {
+    /* Adjust positioning for landscape orientation */
+  }
+  /* Adjust other styles as needed */
+}
+
+@media screen and (max-width: 576px) and (orientation: landscape) {
+  .slider-ctr {
+    height: 40vh; /* Adjust height as needed */
+  }
+  .slide figcaption {
+    /* Adjust positioning for landscape orientation */
+  }
+  /* Adjust other styles as needed */
+}
 
 
 
