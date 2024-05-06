@@ -402,7 +402,22 @@ a {
     max-width: 100%; /* Set maximum width to ensure responsiveness */
     max-height: 500px; /* Set maximum height to maintain aspect ratio */
   }
+  .slide figcaption {
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .slide .title {
+    font-size: 40px;
+  }
+
+  .slide .author {
+    font-size: 14px;
+  }
 }
+  
 
 @media screen and (max-width: 768px) {
   .slider-ctr {
@@ -410,6 +425,20 @@ a {
     height: 400px; /* Adjust the height as needed */
     max-width: 100%; /* Set maximum width to ensure responsiveness */
     max-height: 400px; /* Set maximum height to maintain aspect ratio */
+  }
+  .slide figcaption {
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .slide .title {
+    font-size: 30px;
+  }
+
+  .slide .author {
+    font-size: 12px;
   }
 }
 
@@ -420,6 +449,21 @@ a {
     max-width: 100%; /* Set maximum width to ensure responsiveness */
     max-height: 300px; /* Set maximum height to maintain aspect ratio */
   }
+  .slide figcaption {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .slide .title {
+    font-size: 20px;
+  }
+
+  .slide .author {
+    font-size: 10px;
+  }
+
 }
 
 
