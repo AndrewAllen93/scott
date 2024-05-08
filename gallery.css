@@ -445,19 +445,19 @@ main {
   
   @media (max-width: 1200px) {
 	.masonry {
-	  columns: 3;
+	  columns: 4;
 	}
   }
   
   @media (max-width: 992px) {
 	.masonry {
-	  columns: 2;
+	  columns: 23;
 	}
   }
   
   .masonry {
 	@media (max-width: 768px) {
-	  columns: 1;
+	  columns: 2;
 	}
   }
   
