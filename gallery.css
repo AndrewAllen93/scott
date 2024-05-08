@@ -455,16 +455,17 @@ main {
 	}
   }
   
-  /*.masonry {
+  .masonry {
 	@media (max-width: 768px) {
 	  columns: 1;
 	}
-  }*/
+  }
   
   .masonry .grid {
 	display: inline-block;
-	margin-bottom: 16px;
+	margin-bottom: 20px;
 	position: relative;
+	width: 100%;
   }
   
   .masonry .grid:before {
@@ -484,14 +485,9 @@ main {
   }
   
   .masonry .grid__title {
-	font-size: 28px;
+	font-size: 30px;
 	font-weight: bold;
 	margin: 0px 0px 10px 0px;
-  }
-  
-  .masonry .grid__author {
-	font-size: 14px;
-	font-weight: 300;
   }
   
   .masonry .grid__link {
@@ -512,14 +508,6 @@ main {
 	color: #fff;
 	display: flex;
 	flex-direction: column;
-  }
-  
-  .masonry .grid__tag {
-	background-color: rgba(255, 255, 255, 0.8);
-	color: #333;
-	border-radius: 5px;
-	padding: 5px 15px;
-	margin-bottom: 5px;
   }
   
   .mt-auto {
