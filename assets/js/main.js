@@ -17,65 +17,31 @@ if(navClose){
    })
 }
 
-// buttons
-const sliderControl = document.querySelector(".slider-control");
-
-// slides informations
-const slides = document.querySelectorAll(".slide");
-const slidesLength = slides.length;
-
-// slides array
-let slidesArr = Array.from(slides);
-
-// reverse array sorting
-slidesArr = slidesArr.reverse();
-
-// slide current
-let slideCurrent = 0;
-
-sliderControl.addEventListener("click", function (e) {
-  const target = e.target.closest(".control");
-
-  if (!target) return; // If the clicked element is not a control button, exit the function
-
-  const isNext = target.classList.contains("next");
-
-  if (isNext) {
-    slideCurrent++;
-  } else {
-    slideCurrent--;
-  }
-
-  // Update classes for slides
-  slidesArr.forEach((slide, index) => {
-    if (index === slideCurrent) {
-      slide.classList.add("text-on");
-      slide.classList.remove("slide-on");
-    } else {
-      slide.classList.remove("text-on");
-      slide.classList.add("slide-on");
-    }
-  });
-
-  // Enable/disable next/prev buttons
-  const prevButton = document.querySelector(".control.prev");
-  const nextButton = document.querySelector(".control.next");
+// gallery item filter
   
-  if (slideCurrent === 0) {
-    prevButton.classList.add("disabled");
-  } else {
-    prevButton.classList.remove("disabled");
-  }
+const filterButtons = document.querySelector("#filter-btns").children;
+const items = document.querySelector(".portfolio-gallery").children;
   
-  if (slideCurrent === slidesLength - 1) {
-    nextButton.classList.add("disabled");
-  } else {
-    nextButton.classList.remove("disabled");
-  }
-});
-
-// balapaCop function call
-balapaCop("Image Slider", "#999");
+for (let i = 0; i < filterButtons.length; i++) {
+    filterButtons[i].addEventListener("click", function () {
+        for (let j = 0; j < filterButtons.length; j++) {
+            filterButtons[j].classList.remove("active")
+        }
+        this.classList.add("active");
+        const target = this.getAttribute("data-target")
+  
+        for (let k = 0; k < items.length; k++) {
+            items[k].style.display = "none";
+            if (target == items[k].getAttribute("data-id")) {
+                items[k].style.display = "block";
+            }
+            if (target == "all") {
+                items[k].style.display = "block";
+            }
+        }
+  
+    })
+}
 
 
 
