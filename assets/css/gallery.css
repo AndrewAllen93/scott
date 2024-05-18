@@ -473,7 +473,6 @@ main {
   position: absolute;
   height: 2px;
   right: 32%;
-  background-color: #febd01;
   bottom: 0px;
 }
 .text-center{
@@ -510,8 +509,8 @@ main {
   padding-bottom: 0px;
 }
 .portfolio .filter-buttons ul li.active{
-  color: #febd01;
-  border-bottom: 2px solid #febd01;
+  color: blue;
+  border-bottom: 2px solid black;
 }
 .portfolio .portfolio-gallery{
   flex: 0 0 100%;
