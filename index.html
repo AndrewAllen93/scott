@@ -1,84 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>James Scott Purdy</title>
-  </head>
-  <body>
-    <header class="header" id="header">
-      <nav class="nav container">
-        <a href="index.html" class="nav__logo">
-          <img src="./assets/images/scott-logo.png" alt="Scott Purdy Logo" />
-        </a>
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="gallery.html" class="nav__link">
-                <span>Portfolio</span>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a href="contact.html" class="nav__link">
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
-          <div class="nav__close" id="nav-close">
-            <i class="ri-close-large-line"></i>
-          </div>
-        </div>
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="ri-menu-line"></i>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <main>
-        <div class="container">
-          <div class="header-body">
-            <div class="slider">
-              <div class="overlay anim"></div>
-              <img
-                src="./assets/images/scott.jpg"
-                alt="img"
-                class="slider-img"
-              />
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Box personal portfolio Template</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/modernizr.js"></script>
+</head>
+<body>
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
             </div>
-            <div class="text">
-              <div>
-                <h1>Scott Purdy</h1>
-                <p>
-                  J. SCOTT PURDY is a life-long painter, beginning his study
-                  under the tutelage of Herb Jackson. His love for science and
-                  nature is seen in his work, creating colorful abstract visions
-                  which hint at reality while retaining a playful mood and a
-                  sense of humor. Other than spending time with family or
-                  playing golf with friends, painting is one of Purdy’s favorite
-                  creative outlets.
-                </p>
-              </div>
+        </div>
+    </div>
+    <div class="container-fluid"> 
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" width="80" alt="Logo"></a>
             </div>
-            <ul class="social">
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+        </header>
+        <nav>
+            <ul class="box-primary-nav">
+                <li><a href="about.html">About me</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
             </ul>
-          </div>
+        </nav>
+        <section class="box-intro">
+            <div class="table-cell">
+                <h1 class="box-headline letters rotate-2">
+                    <span class="box-words-wrapper">
+                        <b class="is-visible"> Scott Purdy.</b>
+                        
+                    </span>
+		        </h1>
+                <!-- <h5>everything you need to build your personal portfolio</h5> -->
+            </div>
+            <div class="mouse">
+                <div class="scroll"></div>
+            </div>
+        </section>
+    </div>
+    <div class="portfolio-div">
+        <div class="portfolio">
+            <div class="no-padding portfolio_container">
+                <div class="col-md-3 col-sm-6  fashion logo">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="./img/scott.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Mockups in seconds</span>
+                                    <em>Fashion / Logo</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 ads graphics">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="./img/scott2.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Floating mockups</span>
+                                    <em>Ads / Graphics</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-12 photography">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="./img/scott3.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Photorealistic smartwatch</span>
+                                    <em>Photography</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 fashion ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="./img/scott4.jpg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Held by hands</span>
+                                    <em>Fashion / Ads</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="./img/scott5.jpeg" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Mobile devices</span>
+                                    <em>Graphics / Ads</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-12 photography">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Photorealistic smartwatch</span>
+                                    <em>Photography</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Mobile devices</span>
+                                    <em>Graphics / Ads</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Mobile devices</span>
+                                    <em>Graphics / Ads</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Mobile devices</span>
+                                    <em>Graphics / Ads</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 graphics ads">
+                    <a href="single-project.html" class="portfolio_item">
+                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Mobile devices</span>
+                                    <em>Graphics / Ads</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-      </main>
-    </main>
-    <script src="assets/js/main.js"></script>
-  </body>
+    </div>
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Box Portfolio 2016</p>
+        </div>
+    </footer>
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
 </html>
