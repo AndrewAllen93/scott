@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/6270c52b2d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="menu-icon">
-        <span class="menu-icon__line menu-icon__line-left"></span>
-        <span class="menu-icon__line"></span>
-        <span class="menu-icon__line menu-icon__line-right"></span>
-    </div>
+    <header>
+        <a href="#" class="logo">
+            James Scott Purdy
+        </a>
+        <a class="menu-open" id="nav-open">
+            <i class="fas fa-bars"></i>
+        </a>
+    </header>
 
-    <div class="nav">
-        <div class="nav__content">
-            <ul class="nav__list">
-                <li class="nav__list-item">Home</li>
-                <li class="nav__list-item">About</li>
-                <li class="nav__list-item">Projects</li>
-                <li class="nav__list-item">Contact</li>
-            </ul>
+    <nav class="hide">
+        <a class="nav-close" id="nav-close"><i class="fas fa-times-circle"></i></a>
+        <a href="#" class="nav-links">Home</a>
+        <a href="#" class="nav-links">About</a>
+        <a href="#" class="nav-links">Portfolio</a>
+        <a href="#" class="nav-links">Contact</a>
+        <div class="nav-links-social">
+            <span><i class="fa-brands fa-instagram"></i></span>
+            <span><i class="fa-solid fa-globe"></i></span>
+            <span><i class="fa-solid fa-envelope"></i></span>
         </div>
-    </div>
+    </nav>
 
-    <div class="site-content">
-        <h1 class="site-content__headline">Another menu concept</h1>
-    </div>
-
-    <script src="./main.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
